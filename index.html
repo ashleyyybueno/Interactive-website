@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JOHNDEL BEACH RESORT</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f8f6;
+        }
+
+        header {
+            background-color: #176b5b;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+
+        nav {
+            background-color: #124c43;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav button {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        nav button:hover {
+            color: yellow;
+        }
+
+        .page {
+            display: none;
+            padding: 30px;
+            text-align: center;
+            min-height: 350px;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        h2 {
+            color: #176b5b;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        img {
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #176b5b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media(max-width: 600px) {
+            nav button {
+                margin: 5px;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+
+    <script>
+        function showPage(pageName) {
+
+            var pages = document.getElementsByClassName("page");
+
+            for (var i = 0; i < pages.length; i++) {
+                pages[i].classList.remove("active");
+            }
+
+            document.getElementById(pageName).classList.add("active");
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h1>JOHNDEL BEACH RESORT</h1>
+    <p>Relax, Enjoy, and Experience Nature!</p>
+</header>
+
+<!-- CLICKABLE NAVIGATION -->
+<nav>
+    <button onclick="showPage('home')">HOME</button>
+
+    <button onclick="showPage('about')">ABOUT</button>
+
+    <button onclick="showPage('gallery')">GALLERY</button>
+
+    <button onclick="showPage('contact')">CONTACT</button>
+</nav>
+
+
+<!-- HOME PAGE -->
+<div id="home" class="page active">
+
+    <h2>WELCOME TO JOHNDEL BEACH RESORT!</h2>
+
+    <p>
+        Welcome to Johndel Beach Resort, your perfect place
+        to relax and enjoy. Experience comfort, fun,
+        and unforgettable moments with your family
+        and friends.
+    </p>
+
+    <!-- HOME PICTURE -->
+    <img src="home.png" width="100%" height="250"
+         alt="Johndel Resort">
+
+</div>
+
+
+<!-- ABOUT PAGE -->
+<div id="about" class="page">
+
+    <h2>ABOUT JOHNDEL RESORT</h2>
+
+    <p>
+        Johndel Resort is a wonderful place where
+        families and friends can relax and spend
+        quality time together. It provides a peaceful
+        and welcoming atmosphere for guests to enjoy
+        their vacation and create happy memories.
+    </p>
+
+    <h2>OUR SERVICES</h2>
+
+    <p>
+        • Comfortable Accommodation<br><br>
+        • Swimming and Relaxation<br><br>
+        • Family Bonding Activities<br><br>
+        • Beautiful Resort Surroundings
+    </p>
+
+    <img src="about.png" width="100%" height="220"
+         alt="About our resort">
+
+</div>
+
+
+<!-- GALLERY PAGE -->
+<div id="gallery" class="page">
+
+    <h2>OUR GALLERY</h2>
+
+    <p>
+        Explore the beautiful views and facilities
+        of Johndel Resort!
+    </p>
+
+    <div class="gallery">
+
+        <!-- REPLACE THESE WITH YOUR PICTURES -->
+
+        <img src="view.jpg" width="100%" height="220"
+                 alt="resort view" >
+
+        <img src="pool.jpg" alt="Swimming Pool">
+
+        <img src="hotel.jpg" alt="Hotel Room">
+
+        <img src="garden.jpg" alt="Resort Garden">
+
+      <img src="group.jpg" alt=" G5 pictue">
+      GROUP PICTURE
+
+    </div>
+
+</div>
+
+
+<!-- CONTACT PAGE -->
+<div id="contact" class="page">
+
+    <h2>CONTACT US</h2>
+
+    <p>We would love to hear from you!</p>
+
+    <p>
+        <b>Resort Name:</b> Johndel Resort
+    </p>
+
+    <p>
+        <b>Location:</b> Nasugbu, Batangas
+    </p>
+
+    <p>
+        <b>Phone Number:</b> 09XX-XXX-XXXX
+    </p>
+
+    <p>
+        <b>Email:</b> johndelresort@gmail.com
+    </p>
+
+    <p>
+        For inquiries and reservations,
+        please contact us using the details above.
+    </p>
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 JOHNDEL RESORT</p>
+    <p>Thank you for visiting our website!</p>
+</footer>
+
+</body>
+</html>
